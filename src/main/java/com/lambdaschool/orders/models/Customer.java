@@ -1,7 +1,6 @@
 package com.lambdaschool.orders.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.aspectj.weaver.loadtime.Agent;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -32,13 +31,13 @@ public class Customer
 
     private double paymentamt;
 
-    private double outstandingmat;
+    private double outstandingamt;
 
     private String phone;
 
     @ManyToOne
     @JoinColumn(name = "agentcode",
-    nullable = false)
+        nullable = false)
     @JsonIgnoreProperties(value = "customers",
         allowSetters = true)
     private Agent agent;
@@ -64,10 +63,10 @@ public class Customer
         this.openingamt = openingamt;
         this.receiveamt = receiveamt;
         this.paymentamt = paymentamt;
-        this.outstandingmat = outstandingmat;
+        this.outstandingamt = outstandingmat;
         this.phone = phone;
         this.agent = agent;
-    }
+     }
 
     public long getCustcode() {
         return custcode;
@@ -142,11 +141,11 @@ public class Customer
     }
 
     public double getOutstandingmat() {
-        return outstandingmat;
+        return outstandingamt;
     }
 
     public void setOutstandingmat(double outstandingmat) {
-        this.outstandingmat = outstandingmat;
+        this.outstandingamt = outstandingmat;
     }
 
     public String getPhone() {

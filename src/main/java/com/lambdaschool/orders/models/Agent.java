@@ -26,8 +26,8 @@ public class Agent
     private String country;
 
     @OneToMany(mappedBy = "agent",
-    cascade = CascadeType.ALL,
-    orphanRemoval = true)
+        cascade = CascadeType.ALL,
+        orphanRemoval = true)
     @JsonIgnoreProperties(value = "agent",
         allowSetters = true)
     private List<Customer> customers = new ArrayList<>();
