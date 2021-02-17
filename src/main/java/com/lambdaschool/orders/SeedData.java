@@ -23,9 +23,9 @@
 //@Component
 //public class SeedData
 //        implements CommandLineRunner {
-//    /**
-//     * Connects the customer table to this SeedData method
-//     */
+    /**
+     * Connects the customer table to this SeedData method
+     */
 //    @Autowired
 //    private CustomersRepository custrepos;
 //
